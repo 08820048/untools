@@ -23,6 +23,18 @@ fn main() {
 }
 ```
 
+```rust
+use ctsc_utils::batch_convert;
+fn main() {
+    // Specify the input file, output file, and naming convention
+    batch_convert("input.txt", "output.txt", true);
+}
+```
+
+- "input.txt" 是包含待转换变量名的输入文件路径。
+- "output.txt" 是转换后的变量名将被写入的输出文件路径。
+- true 表示变量名将被转换为 SCREAMING_SNAKE_CASE。将其设置为 false 可进行 camelCase 转换。
+
 ------------------
 
 ## 未来计划
@@ -32,13 +44,13 @@ fn main() {
 1. **支持多种命名约定:**
    - 添加对其他命名约定（如 SCREAMING_SNAKE_CASE）的支持。
 
-2. **批量转换功能:**
+2. **批量转换功能:**[x]
    - 允许用户一次转换多个变量名。
 
 3. **交互模式:**
    - 创建交互式命令行界面，提供更直观的用户体验。
 
-4. **文件处理功能:**
+4. **文件处理功能:**[x]
    - 支持对文件中变量名的批量转换。
 
 5. **自定义规则:**

@@ -1,0 +1,5 @@
+myVariableName
+anotherVariable
+someVariableName
+exampleVariableName
+testVariable

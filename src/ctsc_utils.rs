@@ -1,3 +1,5 @@
+use std::fs;
+
 
 
 /// Converts a camelCase or PascalCase string to snake_case.
@@ -106,4 +108,31 @@ fn starts_with_digit(name: &str) -> bool {
         }
     }
     true
+}
+
+
+/// Batch convert variable names
+/// 
+/// This function reads variable name data from the specified input file, converts them to the specified naming convention (camelCase or SCREAMING_SNAKE_CASE),
+/// and then writes the converted results to the specified output file.
+/// 
+/// # Arguments
+/// - `ifile`: The path to the input file
+/// - `ofile`: The path to the output file
+/// - `is_constant`: Whether to convert to SCREAMING_SNAKE_CASE, `true` to convert to SCREAMING_SNAKE_CASE, `false` to convert to camelCase
+/// 
+/// # Example
+/// 
+/// ```rust
+/// untools::batch_convert("input.txt", "output.txt", true);
+/// ```
+pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
+    let contents = fs::read_to_string(ifile).expect("Unable to read file.");
+
+    let converted_names: Vec<String> = contents.lines().map(|line| ctsc(line.trim(), is_constant)).collect();
+
+    let output_content = converted_names.join("\n");
+    fs::write(ofile, output_content).expect("Unable to write file.");
+
+    println!("Batch conversion successful! Results written to {}", ofile);
 }

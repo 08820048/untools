@@ -9,5 +9,8 @@
 /// and then prints the result to the console.
 mod ctsc_utils;
 fn main() {
-    println!("out: {}", ctsc_utils::ctsc("myVariableName",false));
+    //println!("out: {}", ctsc_utils::ctsc("myVariableName",false));
+    let input_file = "input.txt";
+    let output_file = "output.txt";
+    ctsc_utils::batch_convert(input_file, output_file,true);
 }

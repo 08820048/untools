@@ -16,6 +16,7 @@ uutools = "1.0.0"
 
 ## Usage
 
+
 ```rust
 use ctsc_utils::ctsc;
 
@@ -26,6 +27,18 @@ fn main() {
 }
 ```
 
+```rust
+use ctsc_utils::batch_convert;
+fn main() {
+    // Specify the input file, output file, and naming convention
+    batch_convert("input.txt", "output.txt", true);
+}
+```
+
+In the example above:
+"input.txt" is the path to the input file containing variable names to be converted.
+"output.txt" is the path to the output file where the converted variable names will be written.
+true indicates that the variable names will be converted to SCREAMING_SNAKE_CASE. Set it to false for camelCase conversion.
 ------------------
 ## Futures
 
@@ -34,13 +47,13 @@ fn main() {
 1. **Support for Multiple Naming Conventions:**
    - Add support for other naming conventions such as SCREAMING_SNAKE_CASE.
 
-2. **Batch Conversion Feature:**
+2. **Batch Conversion Feature:** [x]
    - Allow users to convert multiple variable names at once.
 
 3. **Interactive Mode:**
    - Create an interactive command-line interface for a more intuitive user experience.
 
-4. **File Processing Feature:**
+4. **File Processing Feature:** [x]
    - Support batch conversion of variable names in files.
 
 5. **Custom Rules:**
