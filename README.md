@@ -1,7 +1,7 @@
+> 中文文档见[README-CN.md](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 # uutools
-> 中文文档见[README-CN.md]
-A Rust utility crate for converting variable names from camelCase to snake_case.
 
+A Rust utility crate for converting variable names from camelCase to snake_case.
 
 ## Installation
 
