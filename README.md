@@ -47,14 +47,14 @@ In the example above:
 1. **Support for Multiple Naming Conventions:**
    - Add support for other naming conventions such as SCREAMING_SNAKE_CASE.
 
-2. **Batch Conversion Feature:** [x]
-   - Allow users to convert multiple variable names at once.
+2. **Batch Conversion Feature:** 
+   - [x] Allow users to convert multiple variable names at once.
 
 3. **Interactive Mode:**
    - Create an interactive command-line interface for a more intuitive user experience.
 
-4. **File Processing Feature:** [x]
-   - Support batch conversion of variable names in files.
+4. **File Processing Feature:** 
+   - [x] Support batch conversion of variable names in files.
 
 5. **Custom Rules:**
    - Enable users to define custom conversion rules.
