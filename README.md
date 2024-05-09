@@ -36,9 +36,9 @@ fn main() {
 ```
 
 In the example above:
-"input.txt" is the path to the input file containing variable names to be converted.
-"output.txt" is the path to the output file where the converted variable names will be written.
-true indicates that the variable names will be converted to SCREAMING_SNAKE_CASE. Set it to false for camelCase conversion.
+- "input.txt" is the path to the input file containing variable names to be converted.
+- "output.txt" is the path to the output file where the converted variable names will be written.
+- true indicates that the variable names will be converted to SCREAMING_SNAKE_CASE. Set it to false for camelCase conversion.
 ------------------
 ## Futures
 
