@@ -26,12 +26,8 @@ fn main() {
 }
 ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://chat.ilikexff.cn/LICENSE) file for details.
-
 ------------------
-## Future
+## Futures
 
 > Here are the features and improvements we plan to add to the tool in the future. If you have any suggestions or ideas, feel free to share!
 
@@ -69,3 +65,6 @@ If you have any ideas or suggestions regarding the above features, feel free to 
 
 ----
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/MIT) file for details.
