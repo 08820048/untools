@@ -1,6 +1,6 @@
 [package]
 name = "untools"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["Code0408"]
 description = "A simple and user-friendly underscore variable naming tool."
@@ -12,3 +12,4 @@ registry = "https://github.com/rust-lang/crates.io-index"
 
 replace-with = 'crates-io'
 
+[dependencies]
