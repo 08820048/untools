@@ -2,11 +2,6 @@
 
 A Rust utility crate for converting variable names from camelCase to snake_case.
 
-## Features
-
-- Convert variable names from camelCase to snake_case format.
-- Option to convert the result to uppercase.
-- Simple and easy-to-use tool for maintaining consistent variable naming conventions.
 
 ## Installation
 
