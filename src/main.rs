@@ -7,10 +7,12 @@
 /// This function calls the `camel_to_snake_case` function from the `ctsc_utils` crate
 /// to convert the variable name "myVariableName" from camelCase to snake_case format,
 /// and then prints the result to the console.
-mod ctsc_utils;
+//mod utils;
+use untools::{ctsc,batch_convert};
 fn main() {
-    //println!("out: {}", ctsc_utils::ctsc("myVariableName",false));
+    println!("out: {}", ctsc("myVariableName",false));
     let input_file = "input.txt";
     let output_file = "output.txt";
-    ctsc_utils::batch_convert(input_file, output_file,true);
+    batch_convert(input_file, output_file,true);
+
 }

@@ -1,15 +1,22 @@
 [package]
 name = "untools"
-version = "1.0.2"
+version = "1.0.4"
 edition = "2021"
 authors = ["Code0408"]
 description = "A simple and user-friendly underscore variable naming tool."
+repository = "https://github.com/08820048/uutools"
+documentation = "https://docs.rs/untools"
+homepage = "https://code48.ilikexff.cn"
 license = "MIT"
 keywords = ["rust", "camelcase", "snakecase"]
+categories = ["development-tools"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
 
 replace-with = 'crates-io'
+[lib]
+name = "untools"
+path = "src/lib.rs"
 
 [dependencies]
