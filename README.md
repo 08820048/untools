@@ -1,5 +1,5 @@
-# uutool
-
+# uutools
+> 中文文档见[README-CN.md]
 A Rust utility crate for converting variable names from camelCase to snake_case.
 
 

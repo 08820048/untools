@@ -9,5 +9,5 @@
 /// and then prints the result to the console.
 mod ctsc_utils;
 fn main() {
-    println!("out: {}", ctsc_utils::ctsc("myVariableName"));
+    println!("out: {}", ctsc_utils::ctsc("myVariableName",false));
 }
