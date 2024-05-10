@@ -1,4 +1,4 @@
-中文文档[README-CN.md](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
+[中文文档](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 # untools
 A Rust utility crate for converting variable names from `camelCase `to snake_case.
 
