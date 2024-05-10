@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/github/license/08820048/untools)](https://github.com/08820048/untools/blob/master/LICENSE)
 [![rustc 1.77.0](https://img.shields.io/badge/rust-1.77.0-orange.svg)](https://img.shields.io/badge/rust-1.77.0-orange.svg)
 [![Documentation](https://docs.rs/console/badge.svg)](https://docs.rs/untools)
+[![GitHub stars](https://img.shields.io/github/stars/08820048/untools)](https://github.com/08820048/untools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/08820048/untools)](https://github.com/08820048/untools/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/08820048/untools)](https://github.com/08820048/untools/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/08820048/untools)](https://github.com/08820048/untools/pulls)
 
 一个用于将变量名从驼峰式命名转换为蛇形命名的 Rust 实用工具包。
 

@@ -7,6 +7,10 @@ A Rust utility crate for converting variable names from `camelCase `to snake_cas
 [![License](https://img.shields.io/github/license/08820048/untools)](https://github.com/08820048/untools/blob/master/LICENSE)
 [![rustc 1.77.0](https://img.shields.io/badge/rust-1.77.0-orange.svg)](https://img.shields.io/badge/rust-1.77.0-orange.svg)
 [![Documentation](https://docs.rs/console/badge.svg)](https://docs.rs/untools)
+[![GitHub stars](https://img.shields.io/github/stars/08820048/untools)](https://github.com/08820048/untools/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/08820048/untools)](https://github.com/08820048/untools/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/08820048/untools)](https://github.com/08820048/untools/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/08820048/untools)](https://github.com/08820048/untools/pulls)
 
 Add the following dependency to your `Cargo.toml` file:
 
