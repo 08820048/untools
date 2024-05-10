@@ -56,11 +56,11 @@ In the example above:
 1. **Support for Multiple Naming Conventions:**
    - Add support for other naming conventions such as `SCREAMING_SNAKE_CASE`.
 2. **Batch Conversion Feature:** 
-   - [x] Allow users to convert multiple variable names at once.
+   - :white_check_mark: Allow users to convert multiple variable names at once.
 3. **Interactive Mode:**
    - Create an interactive command-line interface for a more intuitive user experience.
 4. **File Processing Feature:** 
-   - [x] Support batch conversion of variable names in files.
+   - :white_check_mark: Support batch conversion of variable names in files.
 5. **Custom Rules:**
    - Enable users to define custom conversion rules.
 6. **Integration with Editor Plugins:**
@@ -68,7 +68,7 @@ In the example above:
 7. **GUI Interface:**
    - Develop a graphical user interface for a more user-friendly experience.
 8. **Support reverse conversion**
-   - [x] Convert underscores to `PascalCase `.
+   - :white_check_mark: Convert underscores to `PascalCase `.
 
 If you have any ideas or suggestions regarding the above features, feel free to raise them in the Issues section or directly submit a Pull Request.
 
