@@ -20,9 +20,7 @@ mod utils;
 ///
 /// A String containing the snake_case version of the input variable name.
 ///
-/// # Panics 
-/// When a panic occurs, it may be due to **your variable** not conforming to the rules of **camelCase or PascalCase**, or being an **empty string**.
-pub fn ctsc(name: &str, is_constant: bool) -> String {
+pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     if name.is_empty() {
         return String::from("Input string is empty. Please provide a valid variable name.");
     }
@@ -74,10 +72,54 @@ pub fn ctsc(name: &str, is_constant: bool) -> String {
 pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
     let contents = fs::read_to_string(ifile).expect("Unable to read file.");
 
-    let converted_names: Vec<String> = contents.lines().map(|line| ctsc(line.trim(), is_constant)).collect();
+    let converted_names: Vec<String> = contents.lines().map(|line| camel_to_snake(line.trim(), is_constant)).collect();
 
     let output_content = converted_names.join("\n");
     fs::write(ofile, output_content).expect("Unable to write file.");
 
     println!("Batch conversion successful! Results written to {}", ofile);
 }
+
+/// Converts a snake_case string to a camelCase string.
+///
+/// # Arguments
+///
+/// * `name` - A string slice that holds the snake_case variable name to be converted.
+/// * `to_lower_camel` - A boolean indicating whether the output should be in lowerCamelCase (true) or UpperCamelCase (false).
+///
+/// # Returns
+///
+/// * A String containing the camelCase representation of the input string.
+///
+pub fn snake_to_camel(name: &str, mut to_lower_camel: bool) -> String {
+    let mut camel_case = String::new();
+    let mut capitalize_next = true;
+
+    if name.is_empty() {
+        return String::from("Input string is empty. Please provide a valid variable name.");
+    }
+
+    if !starts_with_digit(name) {
+        return String::from("Input string is a digit.");
+    }
+
+    for c in name.chars() {
+        if c == '_' {
+            capitalize_next = true;
+        } else {
+            if capitalize_next {
+                if to_lower_camel {
+                    camel_case.push(c.to_ascii_lowercase());
+                    to_lower_camel = false; // Reset to_lower_camel for the next word
+                } else {
+                    camel_case.push(c.to_ascii_uppercase());
+                }
+                capitalize_next = false;
+            } else {
+                camel_case.push(c);
+            }
+        }
+    }
+camel_case
+}
+
