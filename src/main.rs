@@ -10,7 +10,7 @@
 //mod utils;
 use untools::{camel_to_snake,batch_convert,snake_to_camel};
 fn main() {
-    println!("out: {}", camel_to_snake("myVariableName",true));
+    println!("{}", camel_to_snake("121",true));
     let input_file = "input.txt";
     let output_file = "output.txt";
     //batch_convert(input_file, output_file,true);

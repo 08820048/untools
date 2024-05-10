@@ -1,4 +1,5 @@
 
+[English Doc](https://github.com/08820048/untools/blob/master/README.md)
 # untools
 
 一个用于将变量名从驼峰式命名转换为蛇形命名的 Rust 实用工具包。
@@ -57,7 +58,7 @@ fn main() {
 7. **GUI界面:**
    - 开发图形用户界面，提供更友好的体验。
 8. **支持逆向转换**
-   - 将下划线转为大小驼峰风格
+   - [x] 将下划线转为大小驼峰风格
 
 如果您对以上功能有任何想法或建议，请在`Issues`部分提出，或直接提交`Pull Request`。
 

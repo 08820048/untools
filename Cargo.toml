@@ -1,6 +1,6 @@
 [package]
 name = "untools"
-version = "1.0.5"
+version = "1.0.6"
 edition = "2021"
 authors = ["Code0408"]
 description = "A simple and user-friendly underscore variable naming tool."
@@ -20,3 +20,4 @@ name = "untools"
 path = "src/lib.rs"
 
 [dependencies]
+console = "0.15.8"

@@ -1,4 +1,4 @@
-> 中文文档见[README-CN.md](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
+中文文档[README-CN.md](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 # untools
 A Rust utility crate for converting variable names from `camelCase `to snake_case.
 
@@ -60,7 +60,7 @@ In the example above:
 7. **GUI Interface:**
    - Develop a graphical user interface for a more user-friendly experience.
 8. **Support reverse conversion**
-   - Convert underscores to `PascalCase `.
+   - [x] Convert underscores to `PascalCase `.
 
 If you have any ideas or suggestions regarding the above features, feel free to raise them in the Issues section or directly submit a Pull Request.
 

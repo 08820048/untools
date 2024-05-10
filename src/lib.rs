@@ -1,7 +1,8 @@
 use std::fs;
 
-use utils::{is_camel_or_pascal_case, starts_with_digit};
 
+use utils::{is_camel_or_pascal_case, starts_with_digit};
+use console::style;
 
 mod utils;
 /// Converts a camelCase or PascalCase string to snake_case.
@@ -22,11 +23,13 @@ mod utils;
 ///
 pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     if name.is_empty() {
-        return String::from("Input string is empty. Please provide a valid variable name.");
+        println!("{}",style("Input string is empty. Please provide a valid variable name.").color256(208));
+        return String::new();
     }
 
     if !starts_with_digit(name) {
-        return String::from("Input string is a digit.");
+        println!("{}",style("Input string is a digit.").color256(208));
+        return String::new();
     }
 
     if name.contains('_') {
@@ -34,7 +37,8 @@ pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     }
 
     if !is_camel_or_pascal_case(name) {
-        return format!("Input '{}' is not in camelCase format. Please provide a valid camelCase variable name.", name);
+        println!("{}",style("is not in camelCase format. Please provide a valid camelCase variable name.").color256(208));
+        return String::new();
     }
 
     let mut result = String::new();
