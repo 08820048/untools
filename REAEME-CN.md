@@ -2,7 +2,7 @@
 [English Doc](https://github.com/08820048/untools/blob/master/README.md)
 # untools
 [![Crates.io](https://img.shields.io/crates/d/untools.svg)](https://crates.io/crates/untools)
-[![License](https://img.shields.io/github/license/08820048/untools)](https://github.com/08820048/untools)
+[![License](https://img.shields.io/github/license/08820048/untools)](https://github.com/08820048/untools/blob/master/LICENSE)
 [![rustc 1.77.0](https://img.shields.io/badge/rust-1.77.0-orange.svg)](https://img.shields.io/badge/rust-1.77.0-orange.svg)
 [![Documentation](https://docs.rs/console/badge.svg)](https://docs.rs/untools)
 
