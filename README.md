@@ -49,6 +49,30 @@ In the example above:
 
 ------------------
 
+## CLI Usage
+```bash
+$ untools -h
+Usage: untools [OPTIONS] <--camel-to-snake|--snake-to-camel|--batch <OUTPUT_FILE>> <INPUT>
+
+Arguments:
+  <INPUT>
+
+Options:
+  -c, --is-constant
+      --camel-to-snake
+      --snake-to-camel
+      --batch <OUTPUT_FILE>
+  -h, --help                 Print help
+  -V, --version              Print version
+$ untools --camel-to-snake "helloWorld" -c -s
+HELLO_WORLD
+$ untools --snake-to-camel "hello_world" -c -s
+HelloWorld
+$ untools --camel-to-snake "hello_world" -s
+helloWorld
+$ untools --batch "input.txt" "output.txt" -s
+```
+
 ## Futures
 
 > Here are the features and improvements we plan to add to the tool in the future. If you have any suggestions or ideas, feel free to share!
