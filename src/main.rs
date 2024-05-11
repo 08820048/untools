@@ -25,7 +25,7 @@ struct Cli {
     conversion_type: ConversionType,
 }
 
-#[derive(Args, Debug)]
+#[derive(Args, Debug, Clone)]
 #[group(required = true, multiple = false)]
 struct ConversionType {
     #[arg(long)]
@@ -49,16 +49,26 @@ fn main() -> io::Result<()> {
     let conversion_type = args.conversion_type;
     let (cts, stc, b) = (conversion_type.camel_to_snake, conversion_type.snake_to_camel, conversion_type.batch);
     
-    let _result;
+    let mut result: Option<String> = None;
     match (cts, stc, b) {
-        (true, _, _) => { _result = camel_to_snake(input.as_str(), is_constant); }
+        (true, _, _) => { result = Some(camel_to_snake(input.as_str(), is_constant)); }
         
-        (_, true, _) => { _result = snake_to_camel(input.as_str(), is_constant) },
+        (_, true, _) => { result = Some(snake_to_camel(input.as_str(), is_constant))},
         
         (_, _, Some(output_file)) => { batch_convert(input.as_str(), output_file.as_str(), is_constant) },
         
         _ => { unreachable!() }
     }
+    
+    println!("Output");
+    
+    if cts || stc {
+        if result.is_some() {
+            println!("{}", result.unwrap());
+        } 
+    }
+    
+    println!("\nCompleted!");
     
     Ok(())
 }
