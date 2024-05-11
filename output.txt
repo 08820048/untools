@@ -1,5 +1,5 @@
-MY_VARIABLE_NAME
-ANOTHER_VARIABLE
-SOME_VARIABLE_NAME
-EXAMPLE_VARIABLE_NAME
-TEST_VARIABLE
+my_variable_name
+another_variable
+some_variable_name
+example_variable_name
+test_variable

@@ -1,8 +1,7 @@
 use std::fs;
 
-
-use utils::{is_camel_or_pascal_case, starts_with_digit};
 use console::style;
+use utils::{is_camel_or_pascal_case, starts_with_digit};
 
 mod utils;
 /// Converts a camelCase or PascalCase string to snake_case.
@@ -15,20 +14,31 @@ mod utils;
 /// # Arguments
 ///
 /// * `name` - A string slice that holds the variable name to be converted.
-/// * `is_constant` - A boolean flag indicating if the output should be in uppercase.
+/// * `is_constant` - A boolean flag indicating if the output should be in all caps.
 ///
 /// # Returns
 ///
 /// A String containing the snake_case version of the input variable name.
+/// 
+/// # Usage
+///
+/// This converts the the variable "testVariable" from camelcase to snakecase in all caps.
+/// 
+/// ``` 
+/// assert_eq!(camel_to_snake("testVariable", true), "TEST_VARIABLE")
+/// ```
 ///
 pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     if name.is_empty() {
-        println!("{}",style("Input string is empty. Please provide a valid variable name.").color256(208));
+        println!(
+            "{}",
+            style("Input string is empty. Please provide a valid variable name.").color256(208)
+        );
         return String::new();
     }
 
     if !starts_with_digit(name) {
-        println!("{}",style("Input string is a digit.").color256(208));
+        println!("{}", style("Input string is a digit.").color256(208));
         return String::new();
     }
 
@@ -37,7 +47,11 @@ pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     }
 
     if !is_camel_or_pascal_case(name) {
-        println!("{}",style("is not in camelCase format. Please provide a valid camelCase variable name.").color256(208));
+        println!(
+            "{}",
+            style("is not in camelCase format. Please provide a valid camelCase variable name.")
+                .color256(208)
+        );
         return String::new();
     }
 
@@ -57,26 +71,28 @@ pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
     result
 }
 
-
 /// Batch convert variable names
-/// 
+///
 /// This function reads variable name data from the specified input file, converts them to the specified naming convention (camelCase or SCREAMING_SNAKE_CASE),
 /// and then writes the converted results to the specified output file.
-/// 
+///
 /// # Arguments
 /// - `ifile`: The path to the input file
 /// - `ofile`: The path to the output file
 /// - `is_constant`: Whether to convert to SCREAMING_SNAKE_CASE, `true` to convert to SCREAMING_SNAKE_CASE, `false` to convert to camelCase
-/// 
+///
 /// # Example
-/// 
+///
 /// ```rust
 /// untools::batch_convert("input.txt", "output.txt", true);
 /// ```
 pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
     let contents = fs::read_to_string(ifile).expect("Unable to read file.");
 
-    let converted_names: Vec<String> = contents.lines().map(|line| camel_to_snake(line.trim(), is_constant)).collect();
+    let converted_names: Vec<String> = contents
+        .lines()
+        .map(|line| camel_to_snake(line.trim(), is_constant))
+        .collect();
 
     let output_content = converted_names.join("\n");
     fs::write(ofile, output_content).expect("Unable to write file.");
@@ -95,10 +111,12 @@ pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
 ///
 /// * A String containing the camelCase representation of the input string.
 ///
-pub fn snake_to_camel(name: &str, mut to_lower_camel: bool) -> String {
+pub fn snake_to_camel(name: &str, upper_case_camel: bool) -> String {
     let mut camel_case = String::new();
     let mut capitalize_next = true;
 
+    let mut to_lower_camel = !upper_case_camel;
+    
     if name.is_empty() {
         return String::from("Input string is empty. Please provide a valid variable name.");
     }
@@ -124,6 +142,5 @@ pub fn snake_to_camel(name: &str, mut to_lower_camel: bool) -> String {
             }
         }
     }
-camel_case
+    camel_case
 }
-

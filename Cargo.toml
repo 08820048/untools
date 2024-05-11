@@ -20,4 +20,5 @@ name = "untools"
 path = "src/lib.rs"
 
 [dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
 console = "0.15.8"
