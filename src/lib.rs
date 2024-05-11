@@ -80,13 +80,13 @@ pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
 /// - `ifile`: The path to the input file
 /// - `ofile`: The path to the output file
 /// - `is_constant`: Whether to convert to SCREAMING_SNAKE_CASE, `true` to convert to SCREAMING_SNAKE_CASE, `false` to convert to camelCase
-///
+/// - `silent`: Whether to supress output
 /// # Example
 ///
 /// ```rust
 /// untools::batch_convert("input.txt", "output.txt", true);
 /// ```
-pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
+pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool, silent: bool) {
     let contents = fs::read_to_string(ifile).expect("Unable to read file.");
 
     let converted_names: Vec<String> = contents
@@ -96,8 +96,9 @@ pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool) {
 
     let output_content = converted_names.join("\n");
     fs::write(ofile, output_content).expect("Unable to write file.");
-
-    println!("Batch conversion successful! Results written to {}", ofile);
+    if !silent {
+        println!("Batch conversion successful! Results written to {}", ofile);
+    }
 }
 
 /// Converts a snake_case string to a camelCase string.

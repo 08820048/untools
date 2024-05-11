@@ -28,7 +28,7 @@ use untools::camel_to_snake;
 fn main() {
     let camel_case_name = "myVariableName";
     let snake_case_name = camel_to_snake(camel_case_name, true);
-    println!("Converted name: {}", snake_case_name);
+    assert!("MY_VARIABLE_NAME', snake_case_name);
 }
 ```
 
@@ -36,8 +36,8 @@ fn main() {
 use untools::batch_convert;
 
 fn main() {
-    // Specify the input file, output file, and naming convention
-    batch_convert("input.txt", "output.txt", true);
+    // Specify the input file, output file, naming convention, and whether to operate in silent mode.
+    batch_convert("input.txt", "output.txt", true, false);
 }
 ```
 
@@ -46,7 +46,7 @@ In the example above:
 - "`input.txt`" is the path to the input file containing variable names to be converted.
 - "`output.txt`" is the path to the output file where the converted variable names will be written.
 - true indicates that the variable names will be converted to `SCREAMING_SNAKE_CASE`. Set it to false for `camelCase `conversion.
-
+- false indicates that the program will not run in silent mode.
 ------------------
 
 ## CLI Usage
@@ -62,6 +62,7 @@ Options:
       --camel-to-snake
       --snake-to-camel
       --batch <OUTPUT_FILE>
+  -s, --silent
   -h, --help                 Print help
   -V, --version              Print version
 $ untools --camel-to-snake "helloWorld" -c -s
@@ -70,7 +71,7 @@ $ untools --snake-to-camel "hello_world" -c -s
 HelloWorld
 $ untools --camel-to-snake "hello_world" -s
 helloWorld
-$ untools --batch "input.txt" "output.txt" -s
+$ untools --batch "input.txt" "output.txt" -s 
 ```
 
 ## Futures

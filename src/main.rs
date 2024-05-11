@@ -23,6 +23,9 @@ struct Cli {
     
     #[command(flatten)]
     conversion_type: ConversionType,
+    
+    #[arg(long, short = 's')]
+    silent: bool
 }
 
 #[derive(Args, Debug, Clone)]
@@ -45,6 +48,7 @@ fn main() -> io::Result<()> {
     let input = args.input;
     
     let is_constant = args.is_constant;
+    let silent = args.silent;
     
     let conversion_type = args.conversion_type;
     let (cts, stc, b) = (conversion_type.camel_to_snake, conversion_type.snake_to_camel, conversion_type.batch);
@@ -55,12 +59,14 @@ fn main() -> io::Result<()> {
         
         (_, true, _) => { result = Some(snake_to_camel(input.as_str(), is_constant))},
         
-        (_, _, Some(output_file)) => { batch_convert(input.as_str(), output_file.as_str(), is_constant) },
+        (_, _, Some(output_file)) => { batch_convert(input.as_str(), output_file.as_str(), is_constant, silent) },
         
         _ => { unreachable!() }
     }
     
-    println!("Output");
+    if !silent {
+        println!("Output: ");
+    }
     
     if cts || stc {
         if result.is_some() {
