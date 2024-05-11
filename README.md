@@ -50,7 +50,7 @@ In the example above:
 ------------------
 
 ## CLI Usage
-```bash
+```text
 $ untools -h
 Usage: untools [OPTIONS] <--camel-to-snake|--snake-to-camel|--batch <OUTPUT_FILE>> <INPUT>
 
