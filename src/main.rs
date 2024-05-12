@@ -1,17 +1,13 @@
 //! # uutols crate
 //! A simple and user-friendly underscore variable naming tool
+
+
+
 use std::io;
-
-/// Main function to demonstrate the usage of the ctsc_utils crate.
-///
-/// This function calls the `camel_to_snake_case` function from the `ctsc_utils` crate
-/// to convert the variable name "myVariableName" from camelCase to snake_case format,
-/// and then prints the result to the console.
-//mod utils;
 use untools::{camel_to_snake, snake_to_camel, batch_convert};
-
 use clap::{Parser, Args};
 
+/// Command line arguments structure.
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 #[command(arg_required_else_help(true))]
@@ -28,6 +24,7 @@ struct Cli {
     silent: bool
 }
 
+/// Structure defining the conversion type options.
 #[derive(Args, Debug, Clone)]
 #[group(required = true, multiple = false)]
 struct ConversionType {
@@ -41,7 +38,7 @@ struct ConversionType {
     batch: Option<String>,
 }
 
-
+/// Main function to parse command line arguments and execute the appropriate conversion.
 fn main() -> io::Result<()> {
     let args = Cli::parse();
     
@@ -78,3 +75,7 @@ fn main() -> io::Result<()> {
     
     Ok(())
 }
+
+
+
+

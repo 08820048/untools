@@ -16,7 +16,7 @@ Add the following dependency to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-uutools = "1.0.0" # This is just an example. It is recommended to use the latest version number.
+untools = "1.0.0" # This is just an example. It is recommended to use the latest version number.
 ```
 
 ## Usage
@@ -50,7 +50,7 @@ In the example above:
 ------------------
 
 ## CLI Usage
-```text
+```shell
 $ untools -h
 Usage: untools [OPTIONS] <--camel-to-snake|--snake-to-camel|--batch <OUTPUT_FILE>> <INPUT>
 
@@ -83,7 +83,7 @@ $ untools --batch "input.txt" "output.txt" -s
 2. **Batch Conversion Feature:** 
    - :white_check_mark: Allow users to convert multiple variable names at once.
 3. **Interactive Mode:**
-   - Create an interactive command-line interface for a more intuitive user experience.
+   - :white_check_mark: Create an interactive command-line interface for a more intuitive user experience.
 4. **File Processing Feature:** 
    - :white_check_mark: Support batch conversion of variable names in files.
 5. **Custom Rules:**
@@ -101,4 +101,4 @@ If you have any ideas or suggestions regarding the above features, feel free to 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/MIT) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/08820048/untools/blob/master/LICENSE) file for details.

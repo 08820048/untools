@@ -18,7 +18,7 @@
 
 ```toml
 [dependencies]
-uutools = "1.0.0" # 这只是个示例，建议使用最新的版本号
+untools = "1.0.0" # 这只是个示例，建议使用最新的版本号
 ```
 
 ## 使用
@@ -47,6 +47,31 @@ fn main() {
 
 ------------------
 
+## CLI 的使用
+```shell
+$ untools -h
+Usage: untools [OPTIONS] <--camel-to-snake|--snake-to-camel|--batch <OUTPUT_FILE>> <INPUT>
+
+Arguments:
+  <INPUT>
+
+Options:
+  -c, --is-constant
+      --camel-to-snake
+      --snake-to-camel
+      --batch <OUTPUT_FILE>
+  -s, --silent
+  -h, --help                 Print help
+  -V, --version              Print version
+$ untools --camel-to-snake "helloWorld" -c -s
+HELLO_WORLD
+$ untools --snake-to-camel "hello_world" -c -s
+HelloWorld
+$ untools --camel-to-snake "hello_world" -s
+helloWorld
+$ untools --batch "input.txt" "output.txt" -s 
+```
+
 ## 未来计划
 
 > 以下是我们计划在未来为工具添加的功能和改进。如果您有任何建议或想法，请随时分享！
@@ -56,7 +81,7 @@ fn main() {
 2. **批量转换功能:**
    - :white_check_mark: 允许用户一次转换多个变量名。
 3. **交互模式:**
-   - 创建交互式命令行界面，提供更直观的用户体验。
+   - :white_check_mark: 创建交互式命令行界面，提供更直观的用户体验。
 4. **文件处理功能:**
    - :white_check_mark: 支持对文件中变量名的批量转换。
 5. **自定义规则:**
@@ -74,5 +99,5 @@ fn main() {
 
 ## 许可证
 
-本项目根据 MIT 许可证授权 - 有关详细信息，请参阅 [LICENSE](https://opensource.org/license/MIT) 文件。
+本项目根据 MIT 许可证授权 - 有关详细信息，请参阅 [LICENSE](https://github.com/08820048/untools/blob/master/LICENSE) 文件。
 
