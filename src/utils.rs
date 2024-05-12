@@ -56,4 +56,3 @@ pub(crate) fn starts_with_digit(name: &str) -> bool {
     }
     true
 }
-
