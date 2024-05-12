@@ -1,4 +1,3 @@
-[中文文档](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 
 <div align="center">
 <img src="https://images.waer.ltd/notes/untools.png" width="140px" />
