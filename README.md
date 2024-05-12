@@ -1,7 +1,9 @@
 [中文文档](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 
 <div align="center">
-    <img src="https://images.waer.ltd/notes/untools.png" width="140px" />
+<img src="https://images.waer.ltd/notes/untools.png" width="140px" />
+
+[中文文档](https://github.com/08820048/uutools/blob/master/REAEME-CN.md)
 
 [![Crates.io](https://img.shields.io/crates/d/untools.svg)](https://crates.io/crates/untools)
 [![License](https://img.shields.io/github/license/08820048/untools)](https://github.com/08820048/untools/blob/master/LICENSE)
