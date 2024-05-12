@@ -10,7 +10,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/08820048/untools)](https://github.com/08820048/untools/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/08820048/untools)](https://github.com/08820048/untools/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/08820048/untools)](https://github.com/08820048/untools/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/08820048/untools)](https://github.com/08820048/untools/pulls)
+[![Contributors](https://img.shields.io/github/contributors/08820048/untools?style=flat-square)](https://github.com/08820048/untools/graphs/contributors)
+
 
 A Rust utility crate for converting variable names from `camelCase `to snake_case.
 </div>
