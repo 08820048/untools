@@ -81,7 +81,7 @@ $ untools --batch "input.txt" "output.txt" -s
 2. **批量转换功能:**
    - :white_check_mark: 允许用户一次转换多个变量名。
 3. **交互模式:**
-   - :white_check_mark: 创建交互式命令行界面，提供更直观的用户体验。
+   - :white_check_mark: 创建交互式命令行界面，提供更直观的用户体验。[#3](https://github.com/08820048/untools/pull/3)
 4. **文件处理功能:**
    - :white_check_mark: 支持对文件中变量名的批量转换。
 5. **自定义规则:**

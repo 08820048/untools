@@ -83,7 +83,7 @@ $ untools --batch "input.txt" "output.txt" -s
 2. **Batch Conversion Feature:** 
    - :white_check_mark: Allow users to convert multiple variable names at once.
 3. **Interactive Mode:**
-   - :white_check_mark: Create an interactive command-line interface for a more intuitive user experience.
+   - :white_check_mark: Create an interactive command-line interface for a more intuitive user experience. [#3](https://github.com/08820048/untools/pull/3)
 4. **File Processing Feature:** 
    - :white_check_mark: Support batch conversion of variable names in files.
 5. **Custom Rules:**
