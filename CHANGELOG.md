@@ -31,6 +31,6 @@
 ---
 
 ## v1.0.8
-- Added CLI function, support command line way to use untools, thanks to PR author @ s4Dt0y  see details #3 
-- Fix the misspelling of the untools name in README, discovered by @ SebastianJL in the Rust community
+- Added CLI function, support command line way to use untools, thanks to PR author @s4Dt0y  see details [#3](https://github.com/08820048/untools/pull/3)
+- Fix the misspelling of the untools name in README, discovered by @SebastianJL in the Rust community
 - Fix README and update CHANGELOG content
