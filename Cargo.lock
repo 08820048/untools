@@ -189,7 +189,7 @@ checksum = "68f5e5f3158ecfd4b8ff6fe086db7c8467a2dfdac97fe420f2b7c4aa97af66d6"
 
 [[package]]
 name = "untools"
-version = "1.0.8"
+version = "1.0.9"
 dependencies = [
  "clap",
  "console",
