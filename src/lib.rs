@@ -25,6 +25,7 @@ mod utils;
 /// This converts the the variable "testVariable" from camelcase to snakecase in all caps.
 /// 
 /// ``` 
+/// use untools::camel_to_snake;
 /// assert_eq!(camel_to_snake("testVariable", true), "TEST_VARIABLE")
 /// ```
 ///
@@ -84,7 +85,7 @@ pub fn camel_to_snake(name: &str, is_constant: bool) -> String {
 /// # Example
 ///
 /// ```rust
-/// untools::batch_convert("input.txt", "output.txt", true);
+/// untools::batch_convert("input.txt", "output.txt", true, false);
 /// ```
 pub fn batch_convert(ifile: &str, ofile: &str, is_constant: bool, silent: bool) {
     let contents = fs::read_to_string(ifile).expect("Unable to read file.");

@@ -1,0 +1,7 @@
+{
+  "enableAutoRestart" : false,
+  "scanSuffix" : "java,rs,kt,go,py",
+  "scanPath" : "",
+  "fileSuffix" : "java,rs,kt,go,py,md,zig",
+  "excludePath" : ".idea,.gradle,.git,node_modules,build"
+}
