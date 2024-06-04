@@ -110,3 +110,8 @@ If you have any ideas or suggestions regarding the above features, feel free to 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/08820048/untools/blob/master/LICENSE) file for details.
+
+----
+
+## Star趋势图
+[![Stargazers over time](https://starchart.cc/08820048/untools.svg?variant=adaptive)](https://starchart.cc/08820048/untools)
